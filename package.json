@@ -20,12 +20,13 @@
     "@typescript-eslint/parser": "^8.38.0",
     "eslint": "^9.32.0",
     "jest": "^30.0.5",
+    "prettier": "^3.6.2",
     "ts-jest": "^29.4.0",
     "ts-node-dev": "^2.0.0",
     "typedoc": "^0.28.8",
     "typescript": "^5.8.3"
   },
   "dependencies": {
-    "prettier": "^3.6.2"
+    "bcryptjs": "^3.0.2"
   }
 }

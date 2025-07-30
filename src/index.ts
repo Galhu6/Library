@@ -1,3 +1,6 @@
+/**
+ * Public exports for the library.
+ */
 export { Project } from "./entities/Project";
 export { Task } from "./entities/Task";
 export { User } from "./entities/User";
