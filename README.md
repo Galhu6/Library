@@ -5,19 +5,25 @@
 A small collection of reusable TypeScript classes and helpers. The library follows an object oriented design so that common building blocks can be reused across projects.
 
 ## Project Goals
+
 -Provide simple domain entities such as tasks, users and projects
+
 - Keep the codebase modular and easy to extend
 - Include tests and documentation generation
+
 ## Folder Structure
+
 ```
 src/
   core/        Base classes
   entities/    Domain models (Task, User, Project)
   interfaces/  TypeScript interfaces and enums
   utils/       Helper functions
-  __tests__/    Jest test suites
+tests/    Jest test suites
 ```
+
 ## 🚀 Usage
+
 ```bash
 npm install       # install dependencies
 npm run build     # compile TypeScript
@@ -48,3 +54,17 @@ A Task represents a single to-do item.It includes:
 -Priority & tags
 -Ability to mark as done
 -Checks if task is overdue
+
+## 📚 Examples
+
+```ts
+import { Task, UserManager } from "./dist/src";
+
+const task = new Task({ title: "Write docs" });
+task.markComplete();
+
+const manager = new UserManager();
+await manager.register("demo", "demo@example.com", "secret");
+const user = await manager.login("demo", "secret");
+console.log(user?.username); // "demo"
+```

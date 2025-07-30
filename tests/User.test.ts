@@ -7,16 +7,16 @@ describe("User component", () => {
     expect(user.email).toBe("gal@example.com");
   });
 
-  it("allows password to be set", () => {
+  it("allows password to be set", async () => {
     const user = new User({ name: "Bob", email: "bob@example.com" });
-    user.setPassword("secret");
-    expect(user.validatePassword("secret")).toBe(true);
+    await user.setPassword("secret");
+    expect(await user.validatePassword("secret")).toBe(true);
   });
 
-  it("validates password correctly", () => {
+  it("validates password correctly", async () => {
     const user = new User({ name: "Carol", email: "carol@example.com" });
-    user.setPassword("mypassword");
-    expect(user.validatePassword("mypassword")).toBe(true);
-    expect(user.validatePassword("wrong")).toBe(false);
+    await user.setPassword("mypassword");
+    expect(await user.validatePassword("mypassword")).toBe(true);
+    expect(await user.validatePassword("wrong")).toBe(false);
   });
 });
