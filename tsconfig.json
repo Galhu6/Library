@@ -4,7 +4,7 @@
     "module": "CommonJS",            // מודול סיסטם, מתאים ל־Node.js
     "lib": ["ES2020", "DOM"],        // ספריות זמינות לקוד – כולל דפדפן
     "outDir": "./dist",              // לאן לשים את הקבצים המהודרים
-    "rootDir": "./src",              // איפה נמצאים קבצי המקור
+    "rootDir": ".",              // איפה נמצאים קבצי המקור
     "strict": true,                  // להפעיל בדיקות מחמירות (מומלץ)
     "esModuleInterop": true,         // תמיכה ב־import של קבצי CommonJS
     "forceConsistentCasingInFileNames": true,
