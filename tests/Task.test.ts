@@ -1,5 +1,5 @@
-import {Task} from '../components/Task';
-import { TaskStatus } from '../interfaces/types';
+import {Task} from '../src/entities/Task';
+import { TaskStatus } from '../src/interfaces/types';
 
 test('creates a task with default status "pending"', () => {
     const task = new Task({ title: 'Buy milk', status: undefined});
@@ -22,4 +22,7 @@ test('task with no due date is not overdue', () => {
     const task = new Task({title: ' No deadline', status: TaskStatus.PENDING});
     expect(task.isOverdue()).toBe(false);
 });
-
+test('supports repeat values', () => {
+    const task = new Task({ title: 'Water plants', status: TaskStatus.PENDING, repeat: 'weekly'});
+    expect(task.repeat).toBe('weekly');
+});

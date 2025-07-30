@@ -2,44 +2,32 @@
 
 ## 🎯 Project Goal
 
-The goal of this project is to build a modular, well-structured, and reusable personal library that will serve as the foundation for creating full applications and projects with **DRY** (Don't Repeat Yourself) principles and **advanced OOP** (Object-Oriented Programming) design.
+A small collection of reusable TypeScript classes and helpers. The library follows an object oriented design so that common building blocks can be reused across projects.
 
-This library is intended to streamline development, reduce boilerplate, and provide clean, extendable components that I can reuse across multiple projects.
-
-## 💡 Planned Features
-
-- Ready-to-use classes and utilities (task managers, schedulers, logic helpers, etc.)
-- Easy-to-extend and plug-and-play components
-- Fully tested units with Jest
-- Auto-generated documentation via TypeDoc
-- Clean and intuitive documentation structure
-
+## Project Goals
+-Provide simple domain entities such as tasks, users and projects
+- Keep the codebase modular and easy to extend
+- Include tests and documentation generation
+## Folder Structure
+```
+src/
+  core/        Base classes
+  entities/    Domain models (Task, User, Project)
+  interfaces/  TypeScript interfaces and enums
+  utils/       Helper functions
+  __tests__/    Jest test suites
+```
 ## 🚀 Usage
-
-1. Install dependencies:
-
 ```bash
-npm install
-Build the code:
+npm install       # install dependencies
+npm run build     # compile TypeScript
+npm test          # run unit tests
+npm run lint      # lint source files
+npm run doc       # generate typedoc documentation
+```
 
-bash
-Copy code
-npm run build
-Run tests:
+This repository serves as the starting point for a growing toolkit of TypeScript utilities and patterns.
 
-bash
-Copy code
-npm run test
-Lint the code:
-
-bash
-Copy code
-npm run lint
-Generate documentation:
-
-bash
-Copy code
-npm run doc
 🛠 Tech Stack
 TypeScript
 
@@ -50,3 +38,13 @@ ESLint (Linting)
 TypeDoc (Documentation)
 
 This is the beginning of a growing personal toolkit – a library of powerful components that will accelerate future development and serve as a core for more complex systems.
+
+## ✅ Task Component
+
+A Task represents a single to-do item.It includes:
+
+-Title, description, due date
+-Status tracking (pending, completed, cancelled, in_progress, failed)
+-Priority & tags
+-Ability to mark as done
+-Checks if task is overdue

@@ -1,6 +1,6 @@
-import {ITask} from '../interfaces/ITask';
-import { TaskPriority, TaskStatus } from '../interfaces/types';
-import {generateUUID} from '../utils/generateUUID'
+import {ITask} from '../src/interfaces/ITask';
+import { TaskPriority, TaskStatus } from '../src/interfaces/types';
+import {generateUUID} from '../src/utils/generateUUID'
 describe('ITask interface', () => {
     it('should allow valid task structure', () => {
         const task: ITask = {

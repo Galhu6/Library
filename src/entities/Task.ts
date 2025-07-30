@@ -3,6 +3,11 @@ import { ITask } from "../interfaces/ITask";
 import { TaskStatus, TaskPriority } from "../interfaces/types";
 import { isPast } from "../utils/dateUtils";
 
+
+/**
+ * Represents a single user Task with metadata like status, priority, due date, etc.
+ * Supports checking if overdue and marking as complete.
+ */
 export class Task extends BaseEntity implements ITask{
     title: string;
     description?: string;
@@ -10,7 +15,7 @@ export class Task extends BaseEntity implements ITask{
     status: TaskStatus;
     priority?: TaskPriority;
     tags?: string[];
-    repeat?: "daily" | "weekly" | "monthly" | "yearly" | "custome";
+    repeat?: "daily" | "weekly" | "monthly" | "yearly" | "custom";
 
     constructor(data: Partial<ITask>){
         super();
@@ -22,7 +27,7 @@ export class Task extends BaseEntity implements ITask{
         this.tags = data.tags ?? [];
         this.repeat = data.repeat;
     }
-    
+
     cancel(): void {
         this.status = TaskStatus.CANCELLED
     }

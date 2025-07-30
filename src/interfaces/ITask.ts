@@ -9,7 +9,7 @@ export interface ITask extends Identifiable, Persistable {
     priority?: TaskPriority;
     status: TaskStatus;
     tags?: string[]
-    repeat?: 'daily' | 'weekly' | 'monthly' | 'yearly' | 'custome'
+    repeat?: 'daily' | 'weekly' | 'monthly' | 'yearly' | 'custom'
 
     markComplete(): void;
     cancel(): void;

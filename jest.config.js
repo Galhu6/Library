@@ -2,9 +2,9 @@
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'node', // או 'jsdom' אם אתה בודק קוד שרץ בדפדפן (React וכו')
-  roots: ['<rootDir>/src'], // מקום קבצי המקור
+  roots: ['<rootDir>/src','<rootDir>/tests'], // מקום קבצי המקור
   moduleFileExtensions: ['ts', 'js', 'json'],
-  testMatch: ['**/__tests__/**/*.test.(ts|js)'],
+  testMatch: ['**/tests/**/*.test.(ts|js)'],
   transform: {
     '^.+\\.ts$': 'ts-jest'
   },
